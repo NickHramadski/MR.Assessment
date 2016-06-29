@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MR.Assesment\MR.Assesment.Models\MR.Assessment.Models.csproj">
+    <ProjectReference Include="..\MR.Assessment.Models\MR.Assessment.Models.csproj">
       <Project>{7b30de70-4f99-4683-8754-7cce1fc6ddd8}</Project>
       <Name>MR.Assessment.Models</Name>
     </ProjectReference>
