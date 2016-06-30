@@ -7,6 +7,11 @@
 
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link href="~/lib/gijgo/dist/modular/grid/css/grid.base.css" rel="stylesheet" />
+            <link href="~/lib/gijgo/dist/modular/grid/css/grid.min.css" rel="stylesheet" />
+            <link href="~/lib/gijgo/dist/modular/grid/css/grid.pagination.css" rel="stylesheet" />
+            <link href="~/lib/gijgo/dist/modular/grid/css/grid.resizablecolumns.css" rel="stylesheet" />
+            <link href="~/lib/gijgo/dist/modular/grid/css/grid.responsivedesign.css" rel="stylesheet"/>
             <link rel="stylesheet" href="~/css/site.css" />
         </environment>
         <environment names="Staging,Production">
@@ -17,53 +22,72 @@
         </environment>
         @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
     </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">MR Assessment</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    </ul>
-                    @await Html.PartialAsync("_LoginPartial")
-                </div>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-controller="Adds" asp-action="Index" class="navbar-brand">MR Assessment</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-controller="Adds" asp-action="Index">Task 1</a></li>
+                    <li><a asp-controller="Adds" asp-action="Task2">Task 2</a></li>
+                    <li><a asp-controller="Adds" asp-action="Task3">Task 3</a></li>
+                    <li><a asp-controller="Adds" asp-action="Task4">Task 4</a></li>
+                </ul>
+                @*@await Html.PartialAsync("_LoginPartial")*@
             </div>
         </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2016 - MR Assessment</p>
-            </footer>
-        </div>
+    </div>
+    <div class="container body-content">
+        <h4>@ViewData["Title"]</h4>
+        <p>@ViewData["Description"]</p>
 
-        <environment names="Development">
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
-        </environment>
-        <environment names="Staging,Production">
-            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery">
-            </script>
-            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-            </script>
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
-        </environment>
+        @RenderBody()
 
-        @RenderSection("scripts", required: false)
-    </body>
+        <hr />
+
+        <footer>
+            <p>&copy; 2016 - MR Assessment</p>
+        </footer>
+    </div>
+
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        @*jQuery Grid*@
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.base.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.expandcollapserows.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.inlineediting.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.pagination.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.resizablecolumns.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.responsivedesign.js"></script>
+        <script src="~/lib/gijgo/dist/modular/grid/js/grid.toolbar.js"></script>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+
+        </script>
+        @*<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"
+            asp-fallback-src="~/lib/angular/angular.min.js"
+            asp-fallback-test="window.angular"></script>*@
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+</body>
 </html>

@@ -1,0 +1,28 @@
+﻿@using Newtonsoft.Json.Linq
+@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Task 1";
+    ViewData["Description"] = "A full list of the ads, including all object data (AdId, Brand Id and Name, NumPages, and Position). NumPages refers to how many pages the ad takes up in a magazine (0.5 would be a half-page ad) and Position is a string that is either “Page” or “Cover,” describing where in the magazine the ad ran. This list should be sortable and paged. You may use client-side or server-side code to accomplish this. Default sort should be by brand name alphabetically.";
+}
+
+<table id="grid"></table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#grid').grid({
+                dataSource: @Html.Raw(JArray.FromObject(Model)),
+                columns: [
+                    { field: 'AdId', sortable: true },
+                    { field: 'BrandId', sortable: true },
+                    { field: 'Name', sortable: true },
+                    { field: 'NumPages', sortable: true },
+                    { field: 'Position', sortable: true }
+                ],
+                uiLibrary: 'bootstrap',
+                pager: { limit: 10, sizes: [2, 4, 10, 20] },
+                defaultParams: { sortBy: 'Name', direction: 'asc' }
+            });
+        });
+    </script>
+}
