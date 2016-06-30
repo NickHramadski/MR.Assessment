@@ -1,27 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - MR Assessment</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - MR Assessment</title>
 
-        <environment names="Development">
-            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link href="~/lib/gijgo/dist/modular/grid/css/grid.base.css" rel="stylesheet" />
-            <link href="~/lib/gijgo/dist/modular/grid/css/grid.min.css" rel="stylesheet" />
-            <link href="~/lib/gijgo/dist/modular/grid/css/grid.pagination.css" rel="stylesheet" />
-            <link href="~/lib/gijgo/dist/modular/grid/css/grid.resizablecolumns.css" rel="stylesheet" />
-            <link href="~/lib/gijgo/dist/modular/grid/css/grid.responsivedesign.css" rel="stylesheet"/>
-            <link rel="stylesheet" href="~/css/site.css" />
-        </environment>
-        <environment names="Staging,Production">
-            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
-                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        </environment>
-        @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
-    </head>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
+</head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -46,8 +42,12 @@
         </div>
     </div>
     <div class="container body-content">
-        <h4>@ViewData["Title"]</h4>
-        <p>@ViewData["Description"]</p>
+        <h4>@ViewBag.Title</h4>
+        <p>@ViewBag.Description</p>
+
+        <div id='jqxWidget'>
+            <div id="jqxgrid"></div>
+        </div>
 
         @RenderBody()
 
@@ -61,15 +61,7 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        @*jQuery Grid*@
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.base.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.expandcollapserows.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.inlineediting.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.pagination.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.resizablecolumns.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.responsivedesign.js"></script>
-        <script src="~/lib/gijgo/dist/modular/grid/js/grid.toolbar.js"></script>
-
+        <script src="~/lib/jqwidgets/jqwidgets/jqx-all.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">

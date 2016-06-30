@@ -1,3 +1,16 @@
-﻿@{
-    ViewData["Title"] = "Task 4";
+﻿@using Newtonsoft.Json.Linq
+@model JToken
+@{
+    ViewBag.Title = "Task 4";
+    ViewBag.Description = "The top five brands by page coverage amount. Keep in mind that a single brand may run multiple ads. Also sorted by page coverage amount (descending), then brand name alphabetically.";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var data = @Html.Raw(Model);
+            var grid = new GridProxy("#jqxgrid");
+            grid.dataBind(data);
+        });
+    </script>
 }
