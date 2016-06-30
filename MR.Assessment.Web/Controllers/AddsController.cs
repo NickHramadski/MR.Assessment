@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Newtonsoft.Json.Linq;
@@ -30,6 +31,7 @@ namespace MR.Assessment.Web.Controllers
 
         public IActionResult Index()
         {
+            //var class1 = new MR.Assessment.Data.Interaces.Class1();
             return View(Adds);
         }
 

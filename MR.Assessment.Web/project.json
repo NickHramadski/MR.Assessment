@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet5-MR.Assessment.Web-cf6f6e2c-08f9-4efd-b865-90a0e6efd48f",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -35,8 +35,11 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "dnx461": {
+      "dependencies": {
+        
+      }
+    }
   },
 
   "exclude": [

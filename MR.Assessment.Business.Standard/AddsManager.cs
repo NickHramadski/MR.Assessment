@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MR.Assessment.Services
+namespace MR.Assessment.Business.Standard
 {
-    public class AddsService
+    public class AddsManager
     {
+        public void XXX()
+        {
+            
+        }
     }
 }

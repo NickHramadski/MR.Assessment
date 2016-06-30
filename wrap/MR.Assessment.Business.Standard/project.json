@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net461": {
+      "wrappedProject": "../../MR.Assessment.Business.Standard/MR.Assessment.Business.Standard.csproj",
+      "bin": {
+        "assembly": "../../MR.Assessment.Business.Standard/obj/{configuration}/MR.Assessment.Business.Standard.dll",
+        "pdb": "../../MR.Assessment.Business.Standard/obj/{configuration}/MR.Assessment.Business.Standard.pdb"
+      },
+      "dependencies": {
+        "MR.Assessment.Business.Interfaces": "1.0.0-*"
+      }
+    }
+  }
+}

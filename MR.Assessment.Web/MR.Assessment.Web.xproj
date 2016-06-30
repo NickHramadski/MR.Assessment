@@ -19,5 +19,10 @@
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="package.json" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MR.Assessment.Business.Interfaces\MR.Assessment.Business.Interfaces.csproj" />
+    <ProjectReference Include="..\MR.Assessment.Business.Standard\MR.Assessment.Business.Standard.csproj" />
+    <ProjectReference Include="..\MR.Assessment.Data.Standard\MR.Assessment.Data.Standard.csproj" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
