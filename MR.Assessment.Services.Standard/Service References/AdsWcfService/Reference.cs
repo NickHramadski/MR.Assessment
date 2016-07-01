@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestLib.ServiceReference1 {
+namespace MR.Assessment.Services.Standard.AdsWcfService {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,7 +26,7 @@ namespace TestLib.ServiceReference1 {
         private int AdIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestLib.ServiceReference1.Brand BrandField;
+        private MR.Assessment.Services.Standard.AdsWcfService.Brand BrandField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal NumPagesField;
@@ -58,7 +58,7 @@ namespace TestLib.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestLib.ServiceReference1.Brand Brand {
+        public MR.Assessment.Services.Standard.AdsWcfService.Brand Brand {
             get {
                 return this.BrandField;
             }
@@ -168,23 +168,23 @@ namespace TestLib.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IAdDataService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdsWcfService.IAdDataService")]
     public interface IAdDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdDataService/GetAdDataByDateRange", ReplyAction="http://tempuri.org/IAdDataService/GetAdDataByDateRangeResponse")]
-        TestLib.ServiceReference1.Ad[] GetAdDataByDateRange(System.DateTime startDate, System.DateTime endDate);
+        System.Collections.Generic.List<MR.Assessment.Services.Standard.AdsWcfService.Ad> GetAdDataByDateRange(System.DateTime startDate, System.DateTime endDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdDataService/GetAdDataByDateRange", ReplyAction="http://tempuri.org/IAdDataService/GetAdDataByDateRangeResponse")]
-        System.Threading.Tasks.Task<TestLib.ServiceReference1.Ad[]> GetAdDataByDateRangeAsync(System.DateTime startDate, System.DateTime endDate);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MR.Assessment.Services.Standard.AdsWcfService.Ad>> GetAdDataByDateRangeAsync(System.DateTime startDate, System.DateTime endDate);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAdDataServiceChannel : TestLib.ServiceReference1.IAdDataService, System.ServiceModel.IClientChannel {
+    public interface IAdDataServiceChannel : MR.Assessment.Services.Standard.AdsWcfService.IAdDataService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AdDataServiceClient : System.ServiceModel.ClientBase<TestLib.ServiceReference1.IAdDataService>, TestLib.ServiceReference1.IAdDataService {
+    public partial class AdDataServiceClient : System.ServiceModel.ClientBase<MR.Assessment.Services.Standard.AdsWcfService.IAdDataService>, MR.Assessment.Services.Standard.AdsWcfService.IAdDataService {
         
         public AdDataServiceClient() {
         }
@@ -205,11 +205,11 @@ namespace TestLib.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public TestLib.ServiceReference1.Ad[] GetAdDataByDateRange(System.DateTime startDate, System.DateTime endDate) {
+        public System.Collections.Generic.List<MR.Assessment.Services.Standard.AdsWcfService.Ad> GetAdDataByDateRange(System.DateTime startDate, System.DateTime endDate) {
             return base.Channel.GetAdDataByDateRange(startDate, endDate);
         }
         
-        public System.Threading.Tasks.Task<TestLib.ServiceReference1.Ad[]> GetAdDataByDateRangeAsync(System.DateTime startDate, System.DateTime endDate) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MR.Assessment.Services.Standard.AdsWcfService.Ad>> GetAdDataByDateRangeAsync(System.DateTime startDate, System.DateTime endDate) {
             return base.Channel.GetAdDataByDateRangeAsync(startDate, endDate);
         }
     }

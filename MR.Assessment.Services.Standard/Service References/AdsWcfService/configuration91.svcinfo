@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="IpL1smxf0Pl8BUkFjdZc2nOxXsA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/9t0KCHwkIbFWpEMvIMynC+2OaE=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IAdDataService">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IAdDataService" contract="ServiceReference1.IAdDataService" bindingType="basicHttpBinding" address="http://apps.mediaradar.com/AdDataService/AdService.svc" bindingConfiguration="BasicHttpBinding_IAdDataService">
+    <endpoint name="BasicHttpBinding_IAdDataService" contract="AdsWcfService.IAdDataService" bindingType="basicHttpBinding" address="http://apps.mediaradar.com/AdDataService/AdService.svc" bindingConfiguration="BasicHttpBinding_IAdDataService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://apps.mediaradar.com/AdDataService/AdService.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IAdDataService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference1.IAdDataService</serializedValue>
+          <serializedValue>AdsWcfService.IAdDataService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

@@ -6,7 +6,7 @@
     <ProjectGuid>{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MR.Assesment.Services.Tests</RootNamespace>
+    <RootNamespace>MR.Assessment.Business.Tests</RootNamespace>
     <AssemblyName>MR.Assessment.Business.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,6 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.5.10.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.5.10\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
@@ -54,18 +66,36 @@
     <Compile Include="AddsManagerIntergationTests.cs" />
     <Compile Include="AddsManagerUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\JsonUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MR.Assessment\TestLib\TestLib.csproj">
-      <Project>{4054d237-22ba-4159-a468-0b229bf43a25}</Project>
-      <Name>TestLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ads.json">
+    <None Include="DataFiles\ads.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MR.Assessment.Business.Interfaces\MR.Assessment.Business.Interfaces.csproj">
+      <Project>{1dfbc32a-0590-4fcd-8807-caa377bfef95}</Project>
+      <Name>MR.Assessment.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MR.Assessment.Business.Standard\MR.Assessment.Business.Standard.csproj">
+      <Project>{c94b78f2-67d5-4e30-9c1c-5bee6f418851}</Project>
+      <Name>MR.Assessment.Business.Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MR.Assessment.DataModels\MR.Assessment.DataModels.csproj">
+      <Project>{13474282-129e-480b-815d-74cbef0d4db2}</Project>
+      <Name>MR.Assessment.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj">
+      <Project>{7bf3e8a5-de39-4bfd-8abe-8263deece519}</Project>
+      <Name>MR.Assessment.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MR.Assessment.Services.Standard\MR.Assessment.Services.Standard.csproj">
+      <Project>{4054d237-22ba-4159-a468-0b229bf43a25}</Project>
+      <Name>MR.Assessment.Services.Standard</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

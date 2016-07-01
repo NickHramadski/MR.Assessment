@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9c4ab5d5-a8cb-4540-a608-9a03e87c91ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://apps.mediaradar.com/AdDataService/AdService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdService.xsd" MetadataType="Schema" ID="97021f20-d589-418b-8956-99791a6da0a2" SourceId="1" SourceUrl="http://apps.mediaradar.com/AdDataService/AdService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdService1.xsd" MetadataType="Schema" ID="f43ca3cd-db40-435a-9b51-2c95cf070142" SourceId="1" SourceUrl="http://apps.mediaradar.com/AdDataService/AdService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdService.disco" MetadataType="Disco" ID="11b5e84d-4b8f-43f1-9f29-8cb34fc3c9f0" SourceId="1" SourceUrl="http://apps.mediaradar.com/AdDataService/AdService.svc?disco" />
+    <MetadataFile FileName="AdDataService.wsdl" MetadataType="Wsdl" ID="e6d85cb0-d205-4882-83a6-e5569ebe1bc4" SourceId="1" SourceUrl="http://apps.mediaradar.com/AdDataService/AdService.svc?wsdl" />
+    <MetadataFile FileName="AdService2.xsd" MetadataType="Schema" ID="541a7d9f-c051-4fb4-9060-6a24128adb6d" SourceId="1" SourceUrl="http://apps.mediaradar.com/AdDataService/AdService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

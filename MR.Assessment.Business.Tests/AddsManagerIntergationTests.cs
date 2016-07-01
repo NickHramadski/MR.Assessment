@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestLib;
+using MR.Assessment.Services.Standard;
+using MR.Assessment.Services.Standard.Specific.Ads;
 
 namespace MR.Assessment.Business.Tests
 {
@@ -13,8 +14,8 @@ namespace MR.Assessment.Business.Tests
         [TestMethod]
         public async Task ServiceUpAndRunningAndReturnsDataTest()
         {
-            var service = new AddsService();
-            var data = await service.GetAdds();
+            var service = new AdsDataService();
+            var data = await service.GetAll();
 
             Assert.IsNotNull(data);
         }

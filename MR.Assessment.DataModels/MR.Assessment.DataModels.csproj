@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}</ProjectGuid>
+    <ProjectGuid>{13474282-129E-480B-815D-74CBEF0D4DB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MR.Assessment.Business.Standard</RootNamespace>
-    <AssemblyName>MR.Assessment.Business.Standard</AssemblyName>
+    <RootNamespace>MR.Assessment.DataModels</RootNamespace>
+    <AssemblyName>MR.Assessment.DataModels</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,32 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Foundation\BaseGridManager.cs" />
-    <Compile Include="Specific\Ads\AdsGridManager.cs" />
+    <Compile Include="Specific\Ads\AdsFilter.cs" />
+    <Compile Include="Specific\Ads\AdViewModel.cs" />
+    <Compile Include="Foundation\BaseFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MR.Assessment.Business.Interfaces\MR.Assessment.Business.Interfaces.csproj">
-      <Project>{1dfbc32a-0590-4fcd-8807-caa377bfef95}</Project>
-      <Name>MR.Assessment.Business.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MR.Assessment.DataModels\MR.Assessment.DataModels.csproj">
-      <Project>{13474282-129e-480b-815d-74cbef0d4db2}</Project>
-      <Name>MR.Assessment.DataModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj">
-      <Project>{7bf3e8a5-de39-4bfd-8abe-8263deece519}</Project>
-      <Name>MR.Assessment.Services.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MR.Assessment.Services.Standard\MR.Assessment.Services.Standard.csproj">
-      <Project>{4054d237-22ba-4159-a468-0b229bf43a25}</Project>
-      <Name>MR.Assessment.Services.Standard</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

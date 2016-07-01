@@ -7,8 +7,8 @@
     <ProjectGuid>{4054D237-22BA-4159-A468-0B229BF43A25}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestLib</RootNamespace>
-    <AssemblyName>TestLib</AssemblyName>
+    <RootNamespace>MR.Assessment.Services.Standard</RootNamespace>
+    <AssemblyName>MR.Assessment.Services.Standard</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,9 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddsService.cs" />
+    <Compile Include="Exceptions\WcfServiceException.cs" />
+    <Compile Include="Specific\Ads\AdGroped.cs" />
+    <Compile Include="Specific\Ads\AdsDataService.cs" />
+    <Compile Include="Specific\Ads\BrandIdEqualityComparer.cs" />
+    <Compile Include="Specific\Ads\IAdsDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
+    <Compile Include="Service References\AdsWcfService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -60,37 +64,43 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Service References\ServiceReference1\AdDataService.wsdl" />
-    <None Include="Service References\ServiceReference1\AdService.xsd">
+    <None Include="Service References\AdsWcfService\AdDataService.wsdl" />
+    <None Include="Service References\AdsWcfService\AdService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\AdService1.xsd">
+    <None Include="Service References\AdsWcfService\AdService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\AdService2.xsd">
+    <None Include="Service References\AdsWcfService\AdService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\TestLib.ServiceReference1.Ad.datasource">
+    <None Include="Service References\AdsWcfService\MR.Assessment.Services.Standard.AdsWcfService.Ad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\AdsWcfService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\AdService.disco" />
+    <None Include="Service References\AdsWcfService\AdService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\AdsWcfService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\AdsWcfService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
+    <None Include="Service References\AdsWcfService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj">
+      <Project>{7bf3e8a5-de39-4bfd-8abe-8263deece519}</Project>
+      <Name>MR.Assessment.Services.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

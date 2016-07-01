@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41BC6F97-E616-42B5-8C84-39BAF0D6F8D7}"
+	ProjectSection(SolutionItems) = preProject
+		MR.Assessment.Web\global.json = MR.Assessment.Web\global.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Business.Interfaces", "MR.Assessment.Business.Interfaces\MR.Assessment.Business.Interfaces.csproj", "{1DFBC32A-0590-4FCD-8807-CAA377BFEF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Business.Standard", "MR.Assessment.Business.Standard\MR.Assessment.Business.Standard.csproj", "{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Business.Tests", "MR.Assessment.Business.Tests\MR.Assessment.Business.Tests.csproj", "{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Services.Standard", "MR.Assessment.Services.Standard\MR.Assessment.Services.Standard.csproj", "{4054D237-22BA-4159-A468-0B229BF43A25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Services.Interfaces", "MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj", "{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.DataModels", "MR.Assessment.DataModels\MR.Assessment.DataModels.csproj", "{13474282-129E-480B-815D-74CBEF0D4DB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DFBC32A-0590-4FCD-8807-CAA377BFEF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFBC32A-0590-4FCD-8807-CAA377BFEF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFBC32A-0590-4FCD-8807-CAA377BFEF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFBC32A-0590-4FCD-8807-CAA377BFEF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94B78F2-67D5-4E30-9C1C-5BEE6F418851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4054D237-22BA-4159-A468-0B229BF43A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4054D237-22BA-4159-A468-0B229BF43A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4054D237-22BA-4159-A468-0B229BF43A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4054D237-22BA-4159-A468-0B229BF43A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13474282-129E-480B-815D-74CBEF0D4DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13474282-129E-480B-815D-74CBEF0D4DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13474282-129E-480B-815D-74CBEF0D4DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13474282-129E-480B-815D-74CBEF0D4DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
