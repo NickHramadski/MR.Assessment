@@ -16,11 +16,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Business.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Services.Standard", "MR.Assessment.Services.Standard\MR.Assessment.Services.Standard.csproj", "{4054D237-22BA-4159-A468-0B229BF43A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.Services.Interfaces", "MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj", "{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MR.Assessment.DataModels", "MR.Assessment.DataModels\MR.Assessment.DataModels.csproj", "{13474282-129E-480B-815D-74CBEF0D4DB2}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MR.Assessment.Web", "MR.Assessment.Web\MR.Assessment.Web.xproj", "{73EFD952-BEBD-4048-9238-7DEF8F588486}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MR.Assessment.Web.vNext", "MR.Assessment.Web.vNext\MR.Assessment.Web.vNext.xproj", "{73EFD952-BEBD-4048-9238-7DEF8F588486}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Core", "1. Core", "{48EC66BE-A9EC-42CA-8318-F5C7B760609A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Data", "2. Data", "{DDCAF53E-FC46-4914-AC96-12556CB0311E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Business", "3. Business", "{9FF1D6E0-F2B9-437B-BB12-C0B8709FEB6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. UI - vNext", "4. UI - vNext", "{C7F52A45-7653-4464-ABC7-48CFF90F77A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +50,6 @@ Global
 		{4054D237-22BA-4159-A468-0B229BF43A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4054D237-22BA-4159-A468-0B229BF43A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4054D237-22BA-4159-A468-0B229BF43A25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BF3E8A5-DE39-4BFD-8ABE-8263DEECE519}.Release|Any CPU.Build.0 = Release|Any CPU
 		{13474282-129E-480B-815D-74CBEF0D4DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{13474282-129E-480B-815D-74CBEF0D4DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13474282-129E-480B-815D-74CBEF0D4DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,5 +61,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DFBC32A-0590-4FCD-8807-CAA377BFEF95} = {9FF1D6E0-F2B9-437B-BB12-C0B8709FEB6C}
+		{C94B78F2-67D5-4E30-9C1C-5BEE6F418851} = {9FF1D6E0-F2B9-437B-BB12-C0B8709FEB6C}
+		{FF5C2CAE-3EC0-4A10-8EEE-5E0AD694F2A9} = {9FF1D6E0-F2B9-437B-BB12-C0B8709FEB6C}
+		{4054D237-22BA-4159-A468-0B229BF43A25} = {DDCAF53E-FC46-4914-AC96-12556CB0311E}
+		{13474282-129E-480B-815D-74CBEF0D4DB2} = {48EC66BE-A9EC-42CA-8318-F5C7B760609A}
+		{73EFD952-BEBD-4048-9238-7DEF8F588486} = {C7F52A45-7653-4464-ABC7-48CFF90F77A4}
 	EndGlobalSection
 EndGlobal

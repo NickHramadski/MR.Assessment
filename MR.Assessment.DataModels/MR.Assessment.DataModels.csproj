@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Foundation\BaseAggregatedFilter.cs" />
+    <Compile Include="Specific\Ads\AdsAggregatedFilter.cs" />
     <Compile Include="Specific\Ads\AdsFilter.cs" />
     <Compile Include="Specific\Ads\AdViewModel.cs" />
     <Compile Include="Foundation\BaseFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specific\Brands\BrandsFilter.cs" />
+    <Compile Include="Specific\Brands\BrandViewModel.cs" />
+    <Compile Include="Specific\Brands\BrandsAggregatedFilter.cs" />
+    <Compile Include="Specific\Brands\BrandsAggregatedViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

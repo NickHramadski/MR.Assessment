@@ -5,16 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using MR.Assessment.Business.Interfaces.Foundation;
 using MR.Assessment.DataModels.Specific.Ads;
-using MR.Assessment.Services.Standard.AdsWcfService;
+using MR.Assessment.DataModels.Specific.Brands;
 
 namespace MR.Assessment.Business.Interfaces.Specific.Ads
 {
-    public interface IAdsGridManager : IBaseGridManager<Ad, AdsFilter>
+    public interface IAdsGridManager : IBaseGridManager<AdViewModel, AdsFilter>
     {
-        Task<IEnumerable<Ad>> GetAllCoverPosition(AdsFilter filter = null);
+        Task<IEnumerable<AdViewModel>> GetAllCoverPosition(AdsFilter filter = null);
 
-        Task<IEnumerable<Ad>> GetTopFiveByPageCoverageDistinctByBrand();
-
-        Task<IEnumerable<Ad>> GetTopFiveByPageCoverage();
+        Task<IEnumerable<AdViewModel>> GetTopAdsByPageCoverageDistinctByBrand(AdsAggregatedFilter filter = null);
     }
 }

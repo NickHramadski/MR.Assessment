@@ -47,10 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\WcfServiceException.cs" />
-    <Compile Include="Specific\Ads\AdGroped.cs" />
-    <Compile Include="Specific\Ads\AdsDataService.cs" />
-    <Compile Include="Specific\Ads\BrandIdEqualityComparer.cs" />
-    <Compile Include="Specific\Ads\IAdsDataService.cs" />
+    <Compile Include="Foundation\IDataSource.cs" />
+    <Compile Include="Specific\DataSources\WcfServiceDataSource.cs" />
+    <Compile Include="Generic\BrandIdEqualityComparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AdsWcfService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -95,12 +94,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj">
-      <Project>{7bf3e8a5-de39-4bfd-8abe-8263deece519}</Project>
-      <Name>MR.Assessment.Services.Interfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

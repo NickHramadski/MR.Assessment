@@ -63,10 +63,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AddsManagerIntergationTests.cs" />
-    <Compile Include="AddsManagerUnitTests.cs" />
+    <Compile Include="Specific\Ads\AdsManagerIntergationTests.cs" />
+    <Compile Include="Specific\Brands\BrandsManagerUnitTests.cs" />
+    <Compile Include="Specific\Ads\AdsManagerUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\JsonUtils.cs" />
+    <Compile Include="Utils\TestDataUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataFiles\ads.json">
@@ -87,10 +88,6 @@
     <ProjectReference Include="..\MR.Assessment.DataModels\MR.Assessment.DataModels.csproj">
       <Project>{13474282-129e-480b-815d-74cbef0d4db2}</Project>
       <Name>MR.Assessment.DataModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MR.Assessment.Services.Interfaces\MR.Assessment.Services.Interfaces.csproj">
-      <Project>{7bf3e8a5-de39-4bfd-8abe-8263deece519}</Project>
-      <Name>MR.Assessment.Services.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\MR.Assessment.Services.Standard\MR.Assessment.Services.Standard.csproj">
       <Project>{4054d237-22ba-4159-a468-0b229bf43a25}</Project>
