@@ -251,3 +251,4 @@ paket-files/
 .idea/
 *.sln.iml
 /MR.Assessment.Web/wwwroot/lib
+/MR.Assessment.Web.vNext/wwwroot/lib
