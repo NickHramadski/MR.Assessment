@@ -1,0 +1,43 @@
+﻿@using Newtonsoft.Json.Linq
+@model IEnumerable<dynamic>
+@{
+    ViewBag.Title = "Task 3";
+    ViewBag.Description = "The top five ads by page coverage amount, distinct by brand. Sort by page coverage amount (descending), then brand name alphabetically.";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var source =
+            {
+                localdata: @Html.Raw(JArray.FromObject(Model)),
+                datafields: [
+                    { name: 'AdId', type: 'number'},
+                    { name: 'BrandId', type: 'number' },
+                    { name: 'Name', type: 'string' },
+                    { name: 'NumPages', type: 'number' },
+                    { name: 'Position', type: 'string' }
+                ],
+                datatype: "json",
+                sortcolumn: 'Name',
+                sortdirection: 'asc'
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+            $("#jqxgrid").jqxGrid(
+            {
+                width: "100%",
+                source: dataAdapter,
+                columnsresize: true,
+                sortable: true,
+                columns: [
+                  { text: 'ID', datafield: 'AdId', width: 100 },
+                  { text: 'Brand Name', datafield: 'Name', width: "50%" },
+                  { text: 'Brand ID', datafield: 'BrandId', width: 100 },
+                  { text: 'Num Pages', datafield: 'NumPages' },
+                  { text: 'Position', datafield: 'Position' }
+                ]
+            });
+        });
+    </script>
+}

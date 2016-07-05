@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net461": {
+      "wrappedProject": "../../MR.Assessment.Data.Standard/MR.Assessment.Data.Standard.csproj",
+      "bin": {
+        "assembly": "../../MR.Assessment.Data.Standard/obj/{configuration}/MR.Assessment.Data.Standard.dll",
+        "pdb": "../../MR.Assessment.Data.Standard/obj/{configuration}/MR.Assessment.Data.Standard.pdb"
+      }
+    }
+  }
+}

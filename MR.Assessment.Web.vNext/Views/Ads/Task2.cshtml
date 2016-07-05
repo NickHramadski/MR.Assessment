@@ -1,0 +1,17 @@
+﻿@using Newtonsoft.Json.Linq
+@model JToken
+
+@{
+    ViewBag.Title = "Task 2";
+    ViewBag.Description = "A list of ads which appeared in the “Cover” position and also had at least 50% page coverage. This list should also be sortable and paged, and sorted by brand name alphabetically.";
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var data = @Html.Raw(Model);
+            var grid = new GridProxy("#jqxgrid");
+            grid.dataBind(data);
+        });
+    </script>
+}

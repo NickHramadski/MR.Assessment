@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../MR.Assessment.Business.Interfaces/MR.Assessment.Business.Interfaces.csproj",
+      "bin": {
+        "assembly": "../../MR.Assessment.Business.Interfaces/obj/{configuration}/MR.Assessment.Business.Interfaces.dll",
+        "pdb": "../../MR.Assessment.Business.Interfaces/obj/{configuration}/MR.Assessment.Business.Interfaces.pdb"
+      }
+    },
+    "net461": {
+      "wrappedProject": "../../MR.Assessment.Business.Interfaces/MR.Assessment.Business.Interfaces.csproj",
+      "bin": {
+        "assembly": "../../MR.Assessment.Business.Interfaces/obj/{configuration}/MR.Assessment.Business.Interfaces.dll",
+        "pdb": "../../MR.Assessment.Business.Interfaces/obj/{configuration}/MR.Assessment.Business.Interfaces.pdb"
+      }
+    }
+  }
+}
